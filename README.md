@@ -2,6 +2,14 @@
 This repository demonstrates my ability to solve problems using a variety of programming languages. 
 
 There are 5 problems in total:
+1. In Chrome/Safari/Opera, *make sure* you reload your web mail page before trying to use Markdown Here.
+2. In Chrome/Firefox/Safari/Opera, log into your Gmail, Hotmail, or Yahoo account and start a new email. In Thunderbird, start a new message.
+3. Make sure you're using the rich editor.
+   * In Gmail, click the "Rich formatting" link, if it's visible.
+   * In Thunderbird, make sure "Compose messages in HTML format" is enabled in your "Account Settings", "Composition & Addressing" pane.
+4. Compose an email in Markdown. For example:
+
+
 1. Write three functions that compute the sum of the numbers in a given list using a for-loop, a while-loop, and recursion
 2. Write a function that combines two lists by alternatingly taking elements. 
 3. For example: given the two lists [a, b, c] and [1, 2, 3], the function should return [a, 1, b, 2, c, 3]
