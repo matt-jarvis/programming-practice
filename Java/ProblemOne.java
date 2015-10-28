@@ -4,14 +4,22 @@
  * 
  * Numbers: 3, 88, 22, 49, 65, 10, 1, 34, 101 and 77.
  * Answer:	450
+ * 
+ * @author	Matthew Jarvis
+ * @date	28th Oct, 2015	
  */
 import java.util.Arrays;
 
 
 public class ProblemOne
 {
-	
-	private static int CalcFor(int[] nums)
+	/* 
+	 * Calculates and returns the sum of the numbers stored 
+	 * in an array using a for loop.
+	 * 
+	 * @param nums	The array of numbers to be summed
+	 */
+	private static int SumWithFor(int[] nums)
 	{
 		int sum = 0;
 		
@@ -23,7 +31,13 @@ public class ProblemOne
 		return sum;
 	}
 	
-	private static int CalcWhile(int[] nums)
+	/* 
+	 * Calculates and returns the sum of the numbers stored 
+	 * in an array using a while loop.
+	 * 
+	 * @param nums	The array of numbers to be summed
+	 */
+	private static int SumWithWhile(int[] nums)
 	{
 		int sum = 0;
 		int i = 0;
@@ -37,29 +51,38 @@ public class ProblemOne
 		return sum;
 	}
 	
-	private static int CalcRecursion(int[] nums, int len)
+	/* 
+	 * Calculates and returns the sum of the numbers stored 
+	 * in an array using recursion.
+	 * 
+	 * @param nums	The array of numbers to be summed
+	 * @param i		The array index to begin summing from
+	 */
+	private static int SumWithRecursion(int[] nums, int i)
 	{		
-		if (len == 0)
-		{
-			return nums[len];
-		}
-		else
-		{
-			return nums[len] + CalcRecursion(nums, len - 1);
-		}
+		if (i == nums.length)  
+			// Index out of bounds, cease recursion 
+			return 0;
+		else  
+			// Add the number returned by the recursive call to 
+			// the number at the current index.
+			return nums[i] + SumWithRecursion(nums, i + 1);
 	}
 	
 	public static void main(String[] args)
 	{
+		// The numbers to sum
 		int[] nums = { 3, 88, 22, 49, 65, 10, 1, 34, 101, 77 };
+		// The actual sum of the numbers
 		int sum = 450;
 		
+		// Main program
 		System.out.println("Numbers: " + Arrays.toString(nums));
 		System.out.println("Actual answer: " + sum);
 		System.out.println("Calculating...");
-		System.out.println("For-loop answer: " + CalcFor(nums));
-		System.out.println("While-loop answer: " + CalcWhile(nums));
-		System.out.println("Recursion answer: " + CalcRecursion(nums, nums.length - 1));
+		System.out.println("For-loop answer: " + SumWithFor(nums));
+		System.out.println("While-loop answer: " + SumWithWhile(nums));
+		System.out.println("Recursion answer: " + SumWithRecursion(nums, 0));
 	}
 	
 }
