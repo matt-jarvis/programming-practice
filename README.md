@@ -1,5 +1,5 @@
 # **Programming Practice**
-This repository demonstrates my ability to solve problems using a variety of programming languages. 
+This repository demonstrates my ability to solve problems using a variety of programming languages. The problems selected can be found at [here](https://www.shiftedup.com/2015/05/07/five-programming-problems-every-software-engineer-should-be-able-to-solve-in-less-than-1-hour)
 
 There are 5 problems in total:
   
