@@ -1,6 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 /*
  * Write three functions that compute the sum of the numbers in 
  * a given list using a for-loop, a while-loop, and recursion.
@@ -8,6 +5,9 @@ import java.util.Arrays;
  * Numbers: 3, 88, 22, 49, 65, 10, 1, 34, 101 and 77.
  * Answer:	450
  */
+import java.util.Arrays;
+
+
 public class ProblemOne
 {
 	
@@ -37,13 +37,16 @@ public class ProblemOne
 		return sum;
 	}
 	
-	private static int CalcRecursion(int[] nums)
-	{
-		int sum = 0;
-
-		//TODO: Use recursion to calculate the sum
-		
-		return sum;
+	private static int CalcRecursion(int[] nums, int len)
+	{		
+		if (len == 0)
+		{
+			return nums[len];
+		}
+		else
+		{
+			return nums[len] + CalcRecursion(nums, len - 1);
+		}
 	}
 	
 	public static void main(String[] args)
@@ -53,11 +56,10 @@ public class ProblemOne
 		
 		System.out.println("Numbers: " + Arrays.toString(nums));
 		System.out.println("Actual answer: " + sum);
-		
 		System.out.println("Calculating...");
 		System.out.println("For-loop answer: " + CalcFor(nums));
 		System.out.println("While-loop answer: " + CalcWhile(nums));
-		System.out.println("Recursion answer: " + CalcRecursion(nums));
+		System.out.println("Recursion answer: " + CalcRecursion(nums, nums.length - 1));
 	}
 	
 }
