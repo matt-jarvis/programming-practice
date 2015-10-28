@@ -12,7 +12,7 @@ There are 5 problems in total:
 *
 
 The problems will be solved using the following programming languages:
-• Java
-• Python
-• C
-• PHP
+- Java
+- Python
+- C
+- PHP
