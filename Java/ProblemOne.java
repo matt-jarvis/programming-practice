@@ -2,7 +2,7 @@
  * Write three functions that compute the sum of the numbers in 
  * a given list using a for-loop, a while-loop, and recursion.
  * 
- * Numbers: 3, 88, 22, 49, 65, 10, 1, 34, 101 and 77.
+ * Numbers:	3, 88, 22, 49, 65, 10, 1, 34, 101 and 77
  * Answer:	450
  * 
  * @author	Matthew Jarvis
@@ -17,7 +17,7 @@ public class ProblemOne
 	 * Calculates and returns the sum of the numbers stored 
 	 * in an array using a for loop.
 	 * 
-	 * @param nums	The array of numbers to be summed
+	 * @param nums  The array of numbers to be summed
 	 */
 	private static int SumWithFor(int[] nums)
 	{
@@ -35,7 +35,7 @@ public class ProblemOne
 	 * Calculates and returns the sum of the numbers stored 
 	 * in an array using a while loop.
 	 * 
-	 * @param nums	The array of numbers to be summed
+	 * @param nums  The array of numbers to be summed
 	 */
 	private static int SumWithWhile(int[] nums)
 	{
@@ -55,8 +55,8 @@ public class ProblemOne
 	 * Calculates and returns the sum of the numbers stored 
 	 * in an array using recursion.
 	 * 
-	 * @param nums	The array of numbers to be summed
-	 * @param i		The array index to begin summing from
+	 * @param nums  The array of numbers to be summed
+	 * @param i  The index to begin summing from
 	 */
 	private static int SumWithRecursion(int[] nums, int i)
 	{		
