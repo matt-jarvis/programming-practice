@@ -2,7 +2,7 @@
 ** Filename:		problemone.c 
 **
 ** Description:	Write three functions that compute the sum of the numbers in 
-** 				a given list using a for-loop, a while-loop, and recursion. 
+**              a given list using a for-loop, a while-loop, and recursion. 
 ** 
 ** Author:    	Matthew Jarvis        
 ** Start date:	29th Oct, 2015
