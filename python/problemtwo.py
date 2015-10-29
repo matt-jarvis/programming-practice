@@ -15,8 +15,17 @@ def merge_lists(a, b):
 	:param b: The second list to merge (with a).
 	:rtype: list
 	"""
-	# TODO
 	c = []
+	i = 0
+	
+	while 1:
+		if (i < len(a)):
+			c.append(a[i])
+		if (i < len(b)):
+			c.append(b[i])
+		if (i >= len(a) and i >= len(b)):
+			break
+		i += 1
 	return c
 	
 
