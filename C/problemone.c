@@ -24,8 +24,12 @@
  */
 int sumWithFor(int nums[], int len)
 {
-	// TODO
-	return 0;
+	int sum = 0;
+	
+	for (int i = 0; i < len; i++)
+		sum += nums[i];
+	
+	return sum;
 }
 
 /* 
@@ -42,8 +46,16 @@ int sumWithFor(int nums[], int len)
  */
 int sumWithWhile(int nums[], int len)
 {
-	// TODO
-	return 0;
+	int sum = 0;
+	int i = 0;
+	
+	while (i != len)
+	{
+		sum += nums[i];
+		i++;
+	}
+	
+	return sum;
 }
 
 /* 
