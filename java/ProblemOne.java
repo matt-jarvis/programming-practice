@@ -13,6 +13,7 @@ import java.util.Arrays;
 
 public class ProblemOne
 {
+
 	/* 
 	 * Calculates and returns the sum of the numbers stored 
 	 * in an array using a for loop.
@@ -30,6 +31,7 @@ public class ProblemOne
 		
 		return sum;
 	}
+	
 	
 	/* 
 	 * Calculates and returns the sum of the numbers stored 
@@ -51,6 +53,7 @@ public class ProblemOne
 		return sum;
 	}
 	
+	
 	/* 
 	 * Calculates and returns the sum of the numbers stored 
 	 * in an array using recursion.
@@ -68,6 +71,7 @@ public class ProblemOne
 			// the number at the current index.
 			return nums[i] + sumWithRecursion(nums, i + 1);
 	}
+	
 	
 	public static void main(String[] args)
 	{
