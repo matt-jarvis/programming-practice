@@ -20,7 +20,7 @@
  * len: The amount of numbers to sum (starting from 0).
  * 
  * returns: The sum of the the sum of the numbers in 
- * 			the array.
+ *          the array.
  */
 int sumWithFor(int nums[], int len)
 {
@@ -42,7 +42,7 @@ int sumWithFor(int nums[], int len)
  * len: The amount of numbers to sum (starting from 0).
  * 
  * returns: The sum of the the sum of the numbers in 
- * 			the array.
+ *          the array.
  */
 int sumWithWhile(int nums[], int len)
 {
@@ -69,12 +69,17 @@ int sumWithWhile(int nums[], int len)
  * i: The index to begin summing from.
  * 
  * returns: The sum of the the sum of the numbers in 
- * 			the array.
+ *          the array.
  */
 int sumWithRecursion(int nums[], int len, int i)
 {
-	// TODO
-	return 0;
+	if (i == len)
+		// Index out of bounds, cease recursion 
+		return 0;
+	else
+		// Add the number returned by the recursive call to 
+		// the number at the current index.
+		return nums[i] + sumWithRecursion(nums, len, i + 1);
 }
 
 int main()
