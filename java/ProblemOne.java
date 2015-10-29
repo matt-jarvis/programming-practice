@@ -19,7 +19,7 @@ public class ProblemOne
 	 * 
 	 * @param nums  The array of numbers to be summed
 	 */
-	private static int SumWithFor(int[] nums)
+	private static int sumWithFor(int[] nums)
 	{
 		int sum = 0;
 		
@@ -37,7 +37,7 @@ public class ProblemOne
 	 * 
 	 * @param nums  The array of numbers to be summed
 	 */
-	private static int SumWithWhile(int[] nums)
+	private static int sumWithWhile(int[] nums)
 	{
 		int sum = 0;
 		int i = 0;
@@ -58,7 +58,7 @@ public class ProblemOne
 	 * @param nums  The array of numbers to be summed
 	 * @param i  The index to begin summing from
 	 */
-	private static int SumWithRecursion(int[] nums, int i)
+	private static int sumWithRecursion(int[] nums, int i)
 	{		
 		if (i == nums.length)  
 			// Index out of bounds, cease recursion 
@@ -66,7 +66,7 @@ public class ProblemOne
 		else  
 			// Add the number returned by the recursive call to 
 			// the number at the current index.
-			return nums[i] + SumWithRecursion(nums, i + 1);
+			return nums[i] + sumWithRecursion(nums, i + 1);
 	}
 	
 	public static void main(String[] args)
@@ -80,9 +80,11 @@ public class ProblemOne
 		System.out.println("Numbers: " + Arrays.toString(nums));
 		System.out.println("Actual answer: " + sum);
 		System.out.println("Calculating...");
-		System.out.println("For-loop answer: " + SumWithFor(nums));
-		System.out.println("While-loop answer: " + SumWithWhile(nums));
-		System.out.println("Recursion answer: " + SumWithRecursion(nums, 0));
+		System.out.println("For-loop answer: " + sumWithFor(nums));
+		System.out.println("While-loop answer: " + sumWithWhile(nums));
+		System.out.println("Recursion answer: " + sumWithRecursion(nums, 0));
 	}
 	
 }
+
+
