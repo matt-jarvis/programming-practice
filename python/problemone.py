@@ -5,8 +5,9 @@ Numbers: 3, 88, 22, 49, 65, 10, 1, 34, 101 and 77.
 Answer:	450
 
 @author	Matthew Jarvis
-@date	28th Oct, 2015	
+@created 28th Oct, 2015	
 """
+
 
 def sum_with_for(nums):
 	""" 
@@ -16,8 +17,13 @@ def sum_with_for(nums):
 	:param nums: The array of numbers to be summed.
 	:rtype: int
 	"""
-	return 1
+	sum = 0
+	for n in nums:
+		sum += n
 	
+	return sum
+
+
 def sum_with_while(nums):
 	""" 
 	Calculates and returns the sum of the numbers stored 
@@ -26,8 +32,16 @@ def sum_with_while(nums):
 	:param nums: The array of numbers to be summed.
 	:rtype: int
 	"""
-	pass
+	sum = 0
+	i = 0 
 	
+	while i < len(nums):
+		sum += nums[i]
+		i += 1
+	
+	return sum
+
+
 def sum_with_recursion(nums, i):
 	""" 
 	Calculates and returns the sum of the numbers stored 
@@ -37,7 +51,11 @@ def sum_with_recursion(nums, i):
 	:param i: The index to begin summing from
 	:rtype: int
 	"""
-	pass
+	if i == len(nums):
+		return 0
+	else:
+		return nums[i] + sum_with_recursion(nums, i + 1)
+
 
 def run():
 	# main program
