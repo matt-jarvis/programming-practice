@@ -7,6 +7,7 @@
  * Created: 29th Oct, 2015	
  */
 import java.util.Arrays;
+import java.util.List;
 
 
 public class ProblemTwo
@@ -19,10 +20,10 @@ public class ProblemTwo
 	 * @param b  The second list to merge (with a)
 	 * @return c  The merged list (a and b combined)
 	 */
-	private static char[] mergeLists(char[] a, char[] b)
+	private static List<Object> mergeLists(List<Object> a, List<Object> b)
 	{
 		// TODO
-		char[] c = null;
+		List<Object> c = null;
 		return c;
 	}
 	
@@ -30,12 +31,12 @@ public class ProblemTwo
 	public static void main(String[] args)
 	{
 		// The lists to merge
-		char[] lista = { 'a', 'b', 'c' };
-		char[] listb = { '1', '2', '3' };
+		List<Object> lista = Arrays.asList('a', 'b', 'c');
+		List<Object> listb = Arrays.asList(1, 2, 3);
 
 		// Main program
-		System.out.println("List a: " + Arrays.toString(lista));
-		System.out.println("List b: " + Arrays.toString(listb));
+		System.out.println("List a: " + lista.toString());
+		System.out.println("List b: " + listb.toString());
 		System.out.println("Merged: " + mergeLists(lista, listb));
 	}
 	
