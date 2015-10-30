@@ -11,8 +11,6 @@
 ** TODO:        Merge lists that contain elements of different types. 
 ** --------------------------------------------------------------------------*/
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
  
  
 /* 
