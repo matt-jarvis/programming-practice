@@ -34,7 +34,7 @@ int sumWithFor(int nums[], int len)
 
 
 /* 
- * Function: sumWithFor
+ * Function: sumWithWhile
  * ----------------------------------------------------
  * Calculates the sum of the numbers stored 
  * in an array using a while-loop.
@@ -58,7 +58,7 @@ int sumWithWhile(int nums[], int len)
 
 
 /* 
- * Function: sumWithFor
+ * Function: sumWithRecursion
  * ---------------------------------------------------
  * Calculates the sum of the numbers stored 
  * in an array using recursion.
