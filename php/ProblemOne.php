@@ -6,8 +6,9 @@
  * Answer:	450
  *
  * @author	Matthew Jarvis
- * @date	28th Oct, 2015	
+ * @created	28th Oct, 2015	
  */
+
 
 /* 
  * Calculates and returns the sum of the numbers stored 
@@ -17,8 +18,14 @@
  */
 function sum_with_for($nums)
 {
-	return 0;
+	$sum = 0;
+	
+	foreach ($nums as $n)
+		$sum += $n;
+		
+	return $sum;
 }
+
 
 /* 
  * Calculates and returns the sum of the numbers stored 
@@ -28,8 +35,18 @@ function sum_with_for($nums)
  */
 function sum_with_while($nums)
 {
-	return 0;
+	$sum = 0;
+	$i = 0;
+	
+	while ($i < count($nums))
+	{
+		$sum += $nums[$i];
+		$i++;
+	}
+		
+	return $sum;
 }
+
 
 /* 
  * Calculates and returns the sum of the numbers stored 
@@ -42,6 +59,7 @@ function sum_with_recursion($nums, $i)
 {		
 	return 0;
 }
+
 
 // Main Program
 $numlist = array(3, 88, 22, 49, 65, 10, 1, 34, 101, 77);
