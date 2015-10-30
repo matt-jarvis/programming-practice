@@ -57,7 +57,10 @@ function sum_with_while($nums)
  */
 function sum_with_recursion($nums, $i)
 {		
-	return 0;
+	if ($i == count($nums))
+		return 0;
+	else
+		return $nums[$i] + sum_with_recursion($nums, $i + 1);
 }
 
 
