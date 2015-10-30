@@ -19,6 +19,18 @@
 function merge_lists($a, $b)
 {
 	$c = array();	
+	$i = 0;
+	
+	while ($i < count($a) || $i < count($b))
+	{
+		if ($i < count($a))
+			$c[] = $a[$i];
+		if ($i < count($b))
+			$c[] = $b[$i];
+			
+		$i++;
+	}
+	
 	return $c;
 }
 
