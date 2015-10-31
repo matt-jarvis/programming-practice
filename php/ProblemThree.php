@@ -18,12 +18,16 @@
  *
  * @param length: The amount of Fibonacci numbers to compute.
  * @return: The list of Fibonacci numbers.
+ *
+ * TODO: Handle big numbers where length > 92
  */
 function fibonacci($length)
 {
 	$c = array(0, 1);	
 	
-	// TODO: compute the Fibonacci numbers.
+	// Compute the Fibonacci numbers.
+	while (count($c) != $length)
+		$c[] = $c[count($c) - 1] + $c[count($c) - 2];
 	
 	return array_slice($c, 0, $length);
 }
