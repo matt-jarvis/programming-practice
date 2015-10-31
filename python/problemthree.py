@@ -11,18 +11,20 @@ As an example, here are the first 10 Fibonacci numbers:
 @created 31st Oct, 2015	
 """
 
-def fibonacci(len):
+def fibonacci(length):
 	""" 
 	Computes a list of Fibonacci numbers.
 	
-	:param len: The amount of Fibonacci numbers to compute.
+	:param length: The amount of Fibonacci numbers to compute.
  	:rtype: list.
 	"""
 	fib = [0 , 1]
 	
-	# TODO: compute the rest of the Fibonacci numbers.
+	# compute Fibonacci numbers.
+	while len(fib) != length:
+		fib.append(fib[-1] + fib[-2])
 	
-	return fib[:len]
+	return fib[:length]
 	
 
 def run():
