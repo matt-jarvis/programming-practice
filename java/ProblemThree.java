@@ -12,6 +12,7 @@
  */
  
 import java.util.ArrayList;
+import java.math.BigInteger;
 import java.util.List;
 
 public class ProblemThree
@@ -21,21 +22,22 @@ public class ProblemThree
 	 * Computes a list of Fibonacci numbers.
 	 * 
 	 * @param length  The amount of Fibonacci numbers to compute.
-	 * @return  The list of Fibonacci numbers.
-	 * 
-	 * TODO: Type Integer cannot handle big numbers (where length > 46)
+	 * @return  The list of Fibonacci numbers (as BigIntegers).
 	 */
-	private static List<Integer> fibonacci(int length)
+	private static List<BigInteger> fibonacci(int length)
 	{
-		List<Integer> fib = new ArrayList<Integer>();
-		fib.add(0);
-		fib.add(1);
+		List<BigInteger> fib = new ArrayList<BigInteger>();
+		fib.add(BigInteger.valueOf(0));
+		fib.add(BigInteger.valueOf(1));
 
 		// Compute the Fibonacci numbers.
 		while(fib.size() < length)
 		{
 			int i = fib.size();
-			fib.add(fib.get(i - 1) + fib.get(i - 2));
+			BigInteger a = fib.get(i - 1);
+			BigInteger b = fib.get(i - 2);
+			BigInteger c = a.add(b);
+			fib.add(c);
 		}
 		
 		return fib.subList(0, length);
@@ -45,7 +47,7 @@ public class ProblemThree
 	public static void main(String[] args)
 	{
 		// Compute the Fibonacci numbers.
-		List<Integer> fib = fibonacci(100);
+		List<BigInteger> fib = fibonacci(100);
 
 		// Print the Fibonacci numbers.
 		int i = 0;
