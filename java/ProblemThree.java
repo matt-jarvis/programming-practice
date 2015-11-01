@@ -11,8 +11,8 @@
  * Created: 1st Nov, 2015	
  */
  
-import java.util.Arrays;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProblemThree
 {
@@ -22,27 +22,36 @@ public class ProblemThree
 	 * 
 	 * @param length  The amount of Fibonacci numbers to compute.
 	 * @return  The list of Fibonacci numbers.
+	 * 
+	 * TODO: Type Integer cannot handle big numbers (where length > 46)
 	 */
-	private static int[] fibonacci(int length)
+	private static List<Integer> fibonacci(int length)
 	{
-		int[] fib = { 0, 1 };
+		List<Integer> fib = new ArrayList<Integer>();
+		fib.add(0);
+		fib.add(1);
+
+		// Compute the Fibonacci numbers.
+		while(fib.size() < length)
+		{
+			int i = fib.size();
+			fib.add(fib.get(i - 1) + fib.get(i - 2));
+		}
 		
-		// TODO: Compute the Fibonacci numbers.
-		
-		return Arrays.copyOfRange(fib, 0, length);
+		return fib.subList(0, length);
 	}
 	
 
 	public static void main(String[] args)
 	{
 		// Compute the Fibonacci numbers.
-		int[] fib = fibonacci(100);
+		List<Integer> fib = fibonacci(100);
 
 		// Print the Fibonacci numbers.
 		int i = 0;
-		while (i != fib.length)
+		while (i < fib.size())
 		{
-			System.out.println("Fibonacci " + i + ":\t" + fib[i]);
+			System.out.println("Fibonacci " + i + ":\t" + fib.get(i));
 			i++;
 		}
 
