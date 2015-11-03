@@ -27,6 +27,7 @@
  */
 function fibonacci($length)
 {
+	// The start of the Fibonacci sequence
 	$fib = array('0', '1');	
 	
 	// Compute the Fibonacci numbers.
