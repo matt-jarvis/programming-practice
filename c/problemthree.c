@@ -11,11 +11,15 @@
 ** Author:      Matthew Jarvis        
 ** Created:     2nd Nov, 2015
 **
-** TODO:        It seems the largest built-in data type in c is an unsigned 
-**              long long, which still isn't large enough to represent all 
-**              the Fibonacci numbers we require (the 93rd is the largest 
-**              number that can represented by an unsigned long long. 
-**              Perhaps try a library?
+** TODO:        In response to the last TODO - I have found a few libraries
+**              capable of dealing with big numbers (GNU GMP). However, I have
+**              decided it would be good practice to solve this problem without
+**              help from external/3rd party libraries. Initial ideas are
+**              listed below:
+**                  • Treat numbers as a list of smaller numbers (ranging 0-9)
+**                  • To add 2 numbers: iterate each list summing and carrying
+**                  • Numbers will be converted to a char * for printing   
+**              
 ** --------------------------------------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>
