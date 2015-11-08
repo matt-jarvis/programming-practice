@@ -18,10 +18,45 @@ def get_largest_number(numbers):
 	"""
 	if not numbers:
 		raise ValueError("List is empty")
+
+	# create a new list to store the sorted numbers, and add
+	# the first number so we have something to compare to.
+	new_numbers = [numbers[0]]
 	
-	# TODO: compute the largest possible number.
+	# iterate int_list (skip the first value, we added it above).
+	for n in numbers[1:]:
+		# determine where to insert n in the new_list.
+		for index, nn in enumerate(new_numbers):
+			a = combine([n, nn])
+			b = combine([nn, n])
+			if a > b:
+				new_numbers.insert(index, n)
+				break
+			# if end of list is reached, add n to the end.
+			elif nn == new_numbers[-1]:
+				new_numbers.append(n)
+				break
 	
-	return 0
+	# combine the numbers in the new_ist before returning.
+	return combine(new_numbers)
+
+
+def combine(numbers):
+	""" 
+	Combines a list of numbers together. The absolute
+	value is used for negative numbers.
+	For example: The list [7, -34, 2, 910], would return
+	a BigInteger with a value of 7342910.
+	
+	:param numbers: The list of integers to combine.
+	:rtype: integer
+	"""
+	# combine the numbers into a string, abs() will convert 
+	# any negative integers to positive.
+	s = "".join(str(abs(n)) for n in numbers)
+	
+	# convert the string back to an integer before returning.
+	return int(s)
 
 
 def run():
